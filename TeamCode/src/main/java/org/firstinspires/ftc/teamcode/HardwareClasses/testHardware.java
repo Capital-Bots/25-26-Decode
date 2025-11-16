@@ -29,9 +29,11 @@
 
 package org.firstinspires.ftc.teamcode.HardwareClasses;
 
+import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
+import com.qualcomm.robotcore.hardware.Servo;
 
 /**
  * This file works in conjunction with the External Hardware Class sample called: ConceptExternalHardwareClass.java
@@ -62,6 +64,8 @@ public class testHardware {
     public DcMotor rightBackDrive   = null;
     public DcMotor leftRoller       = null;
     public DcMotor rightRoller      = null;
+    public CRServo leftConveyor     = null;
+    public CRServo rightConveyor     = null;
 
 
     public testHardware() {
@@ -82,6 +86,8 @@ public class testHardware {
         rightBackDrive = hwMap.get(DcMotor.class, "rightBack");
         leftRoller = hwMap.get(DcMotor.class, "leftRoller");
         rightRoller = hwMap.get(DcMotor.class, "rightRoller");
+        leftConveyor = hwMap.get(CRServo.class, "leftConveyor");
+        rightConveyor = hwMap.get(CRServo.class, "rightConveyor");
 
 
         leftFrontDrive.setDirection(DcMotor.Direction.REVERSE);
@@ -90,6 +96,7 @@ public class testHardware {
         rightBackDrive.setDirection(DcMotor.Direction.FORWARD);
         leftRoller.setDirection(DcMotorSimple.Direction.REVERSE);
         rightRoller.setDirection(DcMotorSimple.Direction.FORWARD);
+        leftConveyor.setDirection(DcMotorSimple.Direction.REVERSE);
 
 
         leftFrontDrive.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);

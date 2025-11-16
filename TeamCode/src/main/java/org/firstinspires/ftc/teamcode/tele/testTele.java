@@ -89,6 +89,9 @@ public class testTele extends LinearOpMode {
             boolean slowLeft = gamepad2.dpad_left;
             boolean slowRight = gamepad2.dpad_right;
 
+            boolean conveyorOn = true;
+            boolean switchConveyorState = gamepad2.x;
+
             double SPEED_MULTIPLIER = 0.7;
 
 
@@ -143,6 +146,17 @@ public class testTele extends LinearOpMode {
             }else{
                 robot.rightRoller.setPower(0);
                 robot.leftRoller.setPower(0);
+            }
+
+            if (conveyorOn){
+                robot.rightConveyor.setPower(1);
+                robot.leftConveyor.setPower(1);
+            }else{
+                robot.rightConveyor.setPower(0);
+                robot.leftConveyor.setPower(0);
+            }
+            if (switchConveyorState){
+                conveyorOn = !conveyorOn;
             }
 
 
