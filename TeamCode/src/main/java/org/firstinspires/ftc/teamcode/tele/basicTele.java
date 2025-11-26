@@ -67,7 +67,7 @@ public class basicTele extends LinearOpMode {
             boolean slowLeft = gamepad2.dpad_left;
             boolean slowRight = gamepad2.dpad_right;
 
-            double SPEED_MULTIPLIER = 0.3;
+            double SPEED_MULTIPLIER = 0.9;
 
 
             double normalizingFactor = Math.max(Math.abs(verticalComponent)

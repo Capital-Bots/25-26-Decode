@@ -136,11 +136,7 @@ public class testTele extends LinearOpMode {
             if (rotateForward){
                 robot.rightRoller.setPower(1);
                 robot.leftRoller.setPower(1);
-            }else{
-                robot.rightRoller.setPower(0);
-                robot.leftRoller.setPower(0);
-            }
-            if (rotateBackward){
+            }else if (rotateBackward){
                 robot.rightRoller.setPower(-1);
                 robot.leftRoller.setPower(-1);
             }else{

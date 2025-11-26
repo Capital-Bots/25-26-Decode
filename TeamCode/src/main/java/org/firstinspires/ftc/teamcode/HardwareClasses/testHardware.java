@@ -94,9 +94,9 @@ public class testHardware {
         leftBackDrive.setDirection(DcMotor.Direction.REVERSE);
         rightFrontDrive.setDirection(DcMotor.Direction.FORWARD);
         rightBackDrive.setDirection(DcMotor.Direction.FORWARD);
-        leftRoller.setDirection(DcMotorSimple.Direction.REVERSE);
-        rightRoller.setDirection(DcMotorSimple.Direction.FORWARD);
-        leftConveyor.setDirection(DcMotorSimple.Direction.REVERSE);
+        leftRoller.setDirection(DcMotor.Direction.REVERSE);
+        rightRoller.setDirection(DcMotor.Direction.FORWARD);
+        leftConveyor.setDirection(CRServo.Direction.REVERSE);
 
 
         leftFrontDrive.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
